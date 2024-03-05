@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { categoriesData } from "../../../static/data.jsx";
-import { useNavigate } from "react-router-dom/dist";
+import { Link, useNavigate } from "react-router-dom/dist";
 import IconButton from "@mui/material/IconButton";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 
@@ -65,7 +65,7 @@ const Hero = () => {
       {/* right */}
       <div className="flex flex-col md:h-[80vh] h-[50vh] lg:w-1/2 w-full bg-theme bg-opacity-5 rounded-lg justify-between items-center p-4 py-8 bg-texture">
         <div className="w-full flex flex-col gap-y-2">
-          <h1 className="md:text-4xl text-xl max-w-[500px] font-black text-black text-opacity-50 uppercase leading-7 md:leading-[3.3rem]">
+          <h1 className="md:text-4xl text-xl max-w-[500px] font-black text-theme text-opacity-70 uppercase leading-7 md:leading-[3.3rem]">
             Access to high quality, eco-friendly products and services
           </h1>
         </div>
