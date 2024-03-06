@@ -1,9 +1,8 @@
 const sendShopToken = (user, statusCode, res) => {
   const token = user.getJwtToken();
   const options = {
-    domain: ".vercel.app",
     expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
-    httpOnly: true,
+    httpOnly: false,
     sameSite: "none",
     secure: true,
   };
