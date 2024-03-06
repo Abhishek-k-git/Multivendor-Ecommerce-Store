@@ -2,7 +2,7 @@ const sendShopToken = (user, statusCode, res) => {
   const token = user.getJwtToken();
   const options = {
     expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
-    httpOnly: false,
+    httpOnly: true,
     sameSite: "none",
     secure: true,
     path: "/",
