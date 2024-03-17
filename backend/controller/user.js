@@ -104,11 +104,7 @@ router.post(
   catchAsyncErrors(async (req, res, next) => {
     try {
       const { email, password } = req.body;
-      console.log(
-        "login-user----------------email, pass: ----------------- ",
-        email,
-        password
-      );
+      console.log("-----------res1: ----------------- ", res);
 
       if (!email || !password) {
         return next(new ErrorHandler("Please provide the all fields!", 400));
@@ -129,6 +125,7 @@ router.post(
       }
       console.log("login-user-ispassvalid: ---------- : ", isPasswordValid);
       sendToken(user, 201, res);
+      console.log("-----------res2: ----------------- ", res);
     } catch (error) {
       return next(new ErrorHandler(error.message, 500));
     }
