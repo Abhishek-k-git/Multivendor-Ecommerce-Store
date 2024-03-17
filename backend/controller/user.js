@@ -122,7 +122,7 @@ router.post(
           new ErrorHandler("Please provide the correct information", 400)
         );
       }
-
+      console.log("login-user-ispassvalid: ---------- : ", isPasswordValid);
       sendToken(user, 201, res);
     } catch (error) {
       return next(new ErrorHandler(error.message, 500));

@@ -5,7 +5,6 @@ const sendShopToken = (user, statusCode, res) => {
     httpOnly: true,
     sameSite: "none",
     secure: true,
-    path: "/",
   };
 
   res.status(statusCode).cookie("seller_token", token, options).json({

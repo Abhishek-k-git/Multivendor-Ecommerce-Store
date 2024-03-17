@@ -29,9 +29,15 @@ const LoginPage = () => {
           email,
           password,
         },
-        { withCredentials: true }
+        {
+          withCredentials: true,
+          headers: {
+            "Access-Control-Allow-Credentials": true,
+          },
+        }
       )
       .then((res) => {
+        console.log("axios-login-res:-----------------: ", res);
         toast.success("Login Success!");
         navigate("/");
         window.location.reload(true);
