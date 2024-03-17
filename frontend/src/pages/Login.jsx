@@ -31,9 +31,6 @@ const LoginPage = () => {
         },
         {
           withCredentials: true,
-          headers: {
-            "Access-Control-Allow-Credentials": true,
-          },
         }
       )
       .then((res) => {
